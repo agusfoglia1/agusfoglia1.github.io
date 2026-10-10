@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agustina Foglia | Ingeniería en Computación</title>
+<meta name="description" content="Portfolio de Agustina Foglia, estudiante de Ingeniería en Computación en Rafaela. Desarrollo web con Python, React y TypeScript.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F4EF;
+  --ink:#0E2A2B;
+  --muted:#4F6667;
+  --line:#CBD6CF;
+  --mint:#D5EBDF;
+  --accent:#3340F2;
+  --accent-ink:#FFFFFF;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+header.top{padding:1.25rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+header.top strong{font:700 1.125rem var(--display)}
+nav a{margin-left:1.25rem;color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover{text-decoration:underline}
+
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:3rem;align-items:center;padding:3rem 0 4.5rem}
+h1{font:700 clamp(2.6rem,7vw,4.8rem)/1 var(--display);letter-spacing:-.02em;margin:0 0 1.25rem}
+.lead{font-size:1.25rem;max-width:34rem;margin:0 0 1.75rem}
+.actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+
+.qr{background:var(--mint);border-radius:18px;padding:1.5rem;max-width:340px;justify-self:end;width:100%}
+.qr svg{display:block;width:100%;height:auto;background:#fff;border-radius:10px;padding:12px;color:var(--ink)}
+.qr button{all:unset;cursor:pointer;display:block;width:100%}
+.qr p{margin:.9rem 0 0;font-size:.95rem;color:var(--muted)}
+.qr b{color:var(--ink)}
+
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.7rem,4vw,2.4rem)/1.1 var(--display);margin:0 0 2rem;letter-spacing:-.01em}
+h3{font:700 1.35rem/1.2 var(--display);margin:0 0 .5rem}
+
+.project{display:grid;grid-template-columns:1fr 1.4fr;gap:2.5rem;padding:0 0 3rem}
+.project + .project{padding-top:2.5rem;border-top:1px dashed var(--line)}
+.project.small h3{font-size:1.2rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.9rem 0 0;padding:0;list-style:none}
+.tags li{background:var(--mint);padding:.15rem .65rem;border-radius:999px;font-size:.9rem;font-weight:500}
+.project ul.points{margin:0 0 1rem;padding-left:1.1rem}
+.project ul.points li{margin-bottom:.4rem}
+
+.shots{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;margin-top:.5rem}
+.shots figure{margin:0}
+.shots img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff}
+.shots figcaption{margin-top:.4rem;font-size:.9rem;color:var(--muted)}
+.status{display:inline-block;margin:.2rem 0 0;padding:.1rem .6rem;border-radius:999px;background:#FFE9A8;font-size:.85rem;font-weight:600}
+dl.skills{display:grid;grid-template-columns:11rem 1fr;gap:.9rem 2rem;margin:0}
+dl.skills dt{font-weight:600}
+dl.skills dd{margin:0;color:var(--muted)}
+
+.contact p{font-size:1.2rem;max-width:34rem;margin:0 0 1.25rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:2rem;padding-top:1.5rem}
+  .qr{justify-self:start;max-width:280px}
+  .project{grid-template-columns:1fr;gap:1rem}
+  dl.skills{grid-template-columns:1fr;gap:.2rem}
+  dl.skills dd{margin-bottom:.9rem}
+  nav a{margin:0 1rem 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <strong>Agustina Foglia</strong>
+    <nav aria-label="Principal">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Desarrollo web con foco en la experiencia de uso.</h1>
+        <p class="lead">Soy estudiante de cuarto año de Ingeniería en Computación en Rafaela. Construyo aplicaciones completas con Python, React y TypeScript, y me importa que se vean bien y se entiendan al primer uso.</p>
+        <div class="actions">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="https://github.com/agusfoglia1">GitHub</a>
+        </div>
+      </div>
+
+      <aside class="qr">
+        <button type="button" id="qr-btn" aria-label="Generar otro código QR de ejemplo">
+          <svg id="qr" viewBox="0 0 21 21" role="img" aria-label="Código QR de ejemplo que cambia cada diez segundos" shape-rendering="crispEdges"></svg>
+        </button>
+        <p><b>Este código cambia cada <span id="qr-count">10</span> s.</b> Así funciona el QR de Campus Inteligente: se regenera para que no se pueda reutilizar. Tocalo para generar otro.</p>
+      </aside>
+    </div>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+
+      <article class="project">
+        <div>
+          <h3>Campus Inteligente</h3>
+          <p>Sistema web para gestionar un campus y tomar asistencia por QR.</p>
+          <ul class="tags" aria-label="Tecnologías">
+            <li>FastAPI</li><li>PostgreSQL</li><li>JWT</li><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind CSS</li><li>Docker</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="points">
+            <li>El estudiante muestra un QR dinámico desde su celular y una cámara fija en la puerta del aula lo lee para registrar la asistencia.</li>
+            <li>Backend en Python con autenticación JWT y base de datos PostgreSQL.</li>
+            <li>Interfaz responsive, probada en un celular real, con foco en que se vea profesional y dinámica.</li>
+          </ul>
+          <a href="https://github.com/agusfoglia1/campus-inteligente">Ver el código en GitHub</a>
+        </div>
+        <div class="shots" role="list" aria-label="Capturas de Campus Inteligente">
+          <figure role="listitem"><a href="img/campus-login.jpg"><img src="img/campus-login.jpg" width="1400" height="785" loading="lazy" alt="Pantalla de inicio de sesión de Campus Inteligente"></a><figcaption>Inicio de sesión</figcaption></figure>
+          <figure role="listitem"><a href="img/campus-inicio.jpg"><img src="img/campus-inicio.jpg" width="1400" height="785" loading="lazy" alt="Pantalla de inicio de un estudiante con accesos a su QR, materias, perfil y mapa"></a><figcaption>Inicio del estudiante</figcaption></figure>
+          <figure role="listitem"><a href="img/campus-qr.jpg"><img src="img/campus-qr.jpg" width="1400" height="785" loading="lazy" alt="Código QR de asistencia con temporizador de renovación"></a><figcaption>QR de asistencia</figcaption></figure>
+          <figure role="listitem"><a href="img/campus-mapa.jpg"><img src="img/campus-mapa.jpg" width="1400" height="785" loading="lazy" alt="Mapa del campus con edificios y espacios marcados"></a><figcaption>Mapa del campus</figcaption></figure>
+          <figure role="listitem"><a href="img/campus-admin-resumen.jpg"><img src="img/campus-admin-resumen.jpg" width="1400" height="785" loading="lazy" alt="Panel de administración con el resumen de actividad general"></a><figcaption>Panel de administración</figcaption></figure>
+          <figure role="listitem"><a href="img/campus-admin-comisiones.jpg"><img src="img/campus-admin-comisiones.jpg" width="1400" height="785" loading="lazy" alt="Administración de comisiones con opciones para editar y eliminar"></a><figcaption>Gestión de comisiones</figcaption></figure>
+          <figure role="listitem"><a href="img/campus-asistencias.jpg"><img src="img/campus-asistencias.jpg" width="1400" height="785" loading="lazy" alt="Listado de asistencias con filtros y exportación"></a><figcaption>Registro de asistencias</figcaption></figure>
+          <figure role="listitem"><a href="img/campus-actividad.jpg"><img src="img/campus-actividad.jpg" width="1400" height="785" loading="lazy" alt="Historial de escaneos del QR con su resultado"></a><figcaption>Actividad de escaneos</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <h3>Basurero Inteligente</h3>
+          <p>Proyecto de la materia IC I.</p>
+          <p class="status">En desarrollo</p>
+          <ul class="tags" aria-label="Tecnologías">
+            <li>ESP32</li><li>MicroPython</li><li>Sensor PIR</li><li>HC-SR04</li><li>Servomotor</li><li>MIT App Inventor</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="points">
+            <li>Basurero con un ESP32 que detecta presencia con un sensor PIR, mide el nivel de llenado con un sensor ultrasónico y mueve la tapa con un servomotor.</li>
+            <li>Programado en MicroPython, con control del servo por PWM.</li>
+            <li>La aplicación móvil se está desarrollando con MIT App Inventor.</li>
+          </ul>
+          <!-- Cuando subas el proyecto a GitHub (código del ESP32 y el archivo .aia de App Inventor), agregá acá el link:
+               <a href="https://github.com/agusfoglia1/NOMBRE-DEL-REPO">Ver el código en GitHub</a> -->
+        </div>
+      </article>
+
+      <article class="project small">
+        <div>
+          <h3>Plataforma de Servicios Técnicos Verificados</h3>
+          <p>Proyecto final de Ingeniería de Software (2026).</p>
+        </div>
+        <div>
+          <p>Diseño de una aplicación para contratar oficios con geolocalización en tiempo real, trabajando con desarrollo incremental y gestión de requisitos.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <dl class="skills">
+        <dt>Frontend</dt><dd>React, TypeScript, Vite, Tailwind CSS, diseño responsive, consumo de APIs REST</dd>
+        <dt>Backend y datos</dt><dd>Python, FastAPI, programación orientada a objetos, PostgreSQL, MySQL, Django (básico)</dd>
+        <dt>Herramientas</dt><dd>Git, GitHub, Docker</dd>
+        <dt>Hardware y embebidos</dt><dd>ESP32, MicroPython, sensores y servomotores, MIT App Inventor</dd>
+        <dt>IA y automatización</dt><dd>Uso de asistentes de IA en el desarrollo, interés en modelos de lenguaje, pruebas funcionales y documentación técnica</dd>
+        <dt>Idiomas</dt><dd>Español nativo, inglés técnico intermedio</dd>
+      </dl>
+    </section>
+
+    <section id="contacto" class="contact">
+      <h2>Contacto</h2>
+      <p>Estoy abierta a nuevas oportunidades, de forma remota o híbrida en Rafaela y zona.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:agusfoglia1@gmail.com">agusfoglia1@gmail.com</a>
+        <a class="btn" href="https://github.com/agusfoglia1">github.com/agusfoglia1</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Agustina Foglia, Rafaela, Santa Fe.</footer>
+</div>
+
+<script>
+(function(){
+  var N = 21, svg = document.getElementById('qr'), count = document.getElementById('qr-count'), left = 10;
+  function finder(x, y){ return (x < 7 && y < 7) || (x > 13 && y < 7) || (x < 7 && y > 13); }
+  function finderOn(x, y){
+    var fx = x > 13 ? x - 14 : x, fy = y > 13 ? y - 14 : y;
+    var ring = Math.max(Math.abs(fx - 3), Math.abs(fy - 3));
+    return ring === 3 || ring <= 1;
+  }
+  function draw(){
+    var out = '';
+    for (var y = 0; y < N; y++) for (var x = 0; x < N; x++){
+      var on = finder(x, y) ? finderOn(x, y) : Math.random() < 0.48;
+      if (on) out += '<rect x="' + x + '" y="' + y + '" width="1" height="1" fill="currentColor"/>';
+    }
+    svg.innerHTML = out; left = 10; count.textContent = left;
+  }
+  document.getElementById('qr-btn').addEventListener('click', draw);
+  setInterval(function(){ left--; if (left <= 0) draw(); else count.textContent = left; }, 1000);
+  draw();
+})();
+</script>
+</body>
+</html>
